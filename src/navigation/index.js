@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../screens/Home';
 import DeviceScreen from '../screens/Device';
+import BleManagerScreen from '../screens/BleManagerScreen';
 import {Image, TouchableOpacity} from 'react-native';
 
 const Stack = createNativeStackNavigator();
@@ -11,6 +12,7 @@ const Stack = createNativeStackNavigator();
 const RootNavigator = () => (
   <NavigationContainer>
     <Stack.Navigator mode="card">
+      <Stack.Screen name="BleManagerScreen" component={BleManagerScreen} />
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen
         name="Device"
